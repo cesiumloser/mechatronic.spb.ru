@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мехатроника-СПб | Ремонт промышленной электроники</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+        }
+        .service-card, .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        .service-card:hover, .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .animate-pulse-slow {
+            animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        .contact-badge {
+            transition: all 0.3s ease;
+            border-left: 3px solid #2563eb;
+        }
+        .contact-badge:hover {
+            background-color: #f0f7ff;
+            transform: translateX(5px);
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Top Contact Bar -->
+    <div class="bg-blue-900 text-white py-2 px-4">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center space-x-4 mb-2 md:mb-0">
+                <a href="tel:+79944245453" class="flex items-center hover:text-blue-200">
+                    <i class="fas fa-mobile-alt mr-2"></i> +7 (994) 424-54-53
+                </a>
+                <a href="tel:+78129801385" class="flex items-center hover:text-blue-200">
+                    <i class="fas fa-phone-alt mr-2"></i> +7 (812) 980-13-85
+                </a>
+            </div>
+            <div class="flex items-center">
+                <a href="mailto:mehatronic-spb@yandex.ru" class="flex items-center hover:text-blue-200">
+                    <i class="fas fa-envelope mr-2"></i> mehatronic-spb@yandex.ru
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="Main" target="_blank" class="w-16 h-16 mr-3 block">
+                <img src="db/mediafile/logo-1-1.png" alt="Логотип Мехатроника-СПб" class="w-full h-full object-contain">
+                </a>
+                <div>
+                    <h1 class="text-2xl font-bold text-gray-800">Мехатроника-СПб</h1>
+                    <p class="text-sm text-gray-600">Ремонт промышленной электроники</p>
+                </div>
+            </div>
+            
+            <nav class="hidden md:flex items-center space-x-6">
+                <a href="Main" class="text-gray-700 hover:text-blue-600 font-medium px-3 py-2 transition">Главная</a>
+                <a href="Service" class="text-gray-700 hover:text-blue-600 font-medium px-3 py-2 transition">Услуги</a>
+                <a href="Reviews" class="text-gray-700 hover:text-blue-600 font-medium px-3 py-2 transition">Отзывы</a>
+                <a href="about.html" class="text-gray-700 hover:text-blue-600 font-medium px-3 py-2 transition">О компании</a>
+                <a href="Contact" class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-lg font-medium transition">
+                    Контакты
+                </a>
+            </nav>
+            
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-3 px-4 shadow-lg">
+            <div class="space-y-2">
+                <a href="Main" class="block py-2 px-3 text-gray-700 hover:bg-blue-50 rounded transition">Главная</a>
+                <a href="Service" class="block py-2 px-3 text-gray-700 hover:bg-blue-50 rounded transition">Услуги</a>
+                <a href="Reviews" class="block py-2 px-3 text-gray-700 hover:bg-blue-50 rounded transition">Отзывы</a>
+                <a href="about.html" class="block py-2 px-3 text-gray-700 hover:bg-blue-50 rounded transition">О компании</a>
+                <a href="Contact" class="block py-2 px-3 bg-blue-600 text-white rounded font-medium">Контакты</a>
+            </div>
+            <div class="mt-4 pt-4 border-t border-gray-100">
+                <a href="tel:+79944245453" class="flex items-center py-2 px-3 contact-badge">
+                    <i class="fas fa-mobile-alt mr-3 text-blue-600"></i>
+                    <span>+7 (994) 424-54-53</span>
+                </a>
+                <a href="tel:+78129801385" class="flex items-center py-2 px-3 contact-badge">
+                    <i class="fas fa-phone-alt mr-3 text-blue-600"></i>
+                    <span>+7 (812) 980-13-85</span>
+                </a>
+                <a href="mailto:mehatronic-spb@yandex.ru" class="flex items-center py-2 px-3 contact-badge">
+                    <i class="fas fa-envelope mr-3 text-blue-600"></i>
+                    <span>mehatronic-spb@yandex.ru</span>
+                </a>
+            </div>
+        </div>
+    </header>
+<body class="font-sans bg-gray-50">
+    <!-- Вставьте здесь ваш header из других страниц -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <!-- ... ваш существующий header ... -->
+    </header>
+
+    <!-- Секция 404 -->
+    <section class="hero-gradient text-white py-32">
+        <div class="container mx-auto px-4 text-center">
+            <div class="max-w-2xl mx-auto">
+                <h1 class="text-6xl md:text-8xl font-bold mb-6">404</h1>
+                <h2 class="text-2xl md:text-3xl font-bold mb-6">Страница не найдена</h2>
+                <p class="text-xl mb-8">К сожалению, запрашиваемая страница не существует или была перемещена.</p>
+                <a href="Main" class="inline-block bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-bold text-lg transition duration-300">
+                    Вернуться на главную
+                </a>
+            </div>
+        </div>
+    </section>
+
+     <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Мехатроника-СПб</h3>
+                    <p class="text-gray-400">Скорая квалифицированная помощь для Вашего оборудования.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Услуги</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Ремонт ПЛК</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Ремонт HMI панелей</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Ремонт спецтехники</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Ремонт актуаторов Danfoss</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Контакты</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2"></i> Санкт-Петербург, М. Пл. Восстания, ул. 3-я Советская 9, офис 41
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-2"></i> +7 (812) 123-45-67
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2"></i> mehatronic-spb@yandex.ru
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Режим работы</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Пн-Пт: 9:00 - 18:00</li>
+                        <li>Сб: 10:00 - 15:00</li>
+                        <li>Вс: выходной</li>
+                    </ul>
+                    <div class="mt-4 flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-vk text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-telegram text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-whatsapp text-xl"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025. Мехатроника-СПб. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,367 @@
+/* Стили для мобильного меню */
+#mobile-menu {
+    transition: all 0.3s ease;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+}
+
+#mobile-menu:not(.hidden) {
+    max-height: 1000px;
+    opacity: 1;
+}
+/* Custom Animations */
+  #whatsapp-button {
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+  }
+  
+  #whatsapp-button:hover {
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+    transform: scale(1.1) rotate(5deg);
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    transition: all 0.3s ease;
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    box-shadow: 0 0 0 3px rgba(37, 211, 102, 0.2);
+    border-color: #25D366;
+  }
+  
+  #whatsapp-popup {
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  #back-to-top {
+  transition: all 0.3s ease;
+  transform: translateY(0);
+}
+
+#back-to-top:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Дополнительные стили для WhatsApp */
+#whatsapp-widget {
+  bottom: 80px; /* Поднимаем выше */
+  z-index: 60; /* Убедимся, что WhatsApp поверх */
+}
+        .hero-gradient {
+    background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+}
+#back-to-top {
+    position: fixed;
+    bottom: 10px; /* Было 8px (слишком близко к низу) — увеличиваем отступ */
+    right: 35px;
+    width: 50px;
+    height: 50px;
+    background: #2563eb;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 999; /* Убедитесь, что кнопка поверх других элементов */
+    transition: all 0.3s;
+}
+
+#back-to-top:hover {
+    background: #1e3a8a;
+}
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;  /* WhatsApp остаётся внизу */
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 998;  /* Ниже кнопки "Наверх" */
+}
+/* Основные стили для градиентных заголовков разделов */
+.section-header-container {
+    width: 100%;
+    background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+    padding: 25px 0;
+    margin-bottom: 3rem;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+    display: inline-block;
+    color: white;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding: 0 30px;
+    position: relative;
+    margin: 0;
+}
+
+.section-title:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -12px;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: white;
+    border-radius: 2px;
+    opacity: 0.8;
+}
+
+/* Анимации для карточек особенностей */
+.feature-card {
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transform: translateY(0);
+    cursor: pointer;
+    border: 1px solid #e2e8f0;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    border-color: #2563eb;
+}
+
+.feature-card:hover .bg-blue-100 {
+    background-color: #2563eb;
+    transform: rotate(8deg) scale(1.1);
+    transition: all 0.4s ease;
+}
+
+.feature-card:hover .text-blue-600 {
+    color: white;
+}
+
+/* Анимации для сервисных карточек */
+.service-card {
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transform: scale(1);
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.service-card:hover {
+    transform: scale(1.05) translateY(-8px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+}
+
+.service-card:hover .bg-blue-600 {
+    background-color: #1e3a8a;
+    transition: background-color 0.4s ease;
+}
+
+.service-card:hover img {
+    transform: scale(1.1);
+    transition: transform 0.4s ease;
+}
+
+/* Анимации для карточек преимуществ */
+.advantage-card {
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    cursor: pointer;
+    border: 1px solid #edf2f7;
+}
+
+.advantage-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.2);
+    border-color: #2563eb;
+}
+
+.advantage-card:hover .bg-blue-100 {
+    background-color: #2563eb !important;
+    transform: scale(1.15);
+    transition: all 0.4s ease;
+}
+
+.advantage-card:hover .text-blue-600 {
+    color: white !important;
+}
+
+/* Анимации для карточек отзывов */
+.testimonial-card {
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    cursor: pointer;
+    border: 1px solid #e2e8f0;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.testimonial-card:hover .fa-quote-right {
+    color: #2563eb;
+    transform: scale(1.2);
+    transition: all 0.4s ease;
+}
+
+/* Дополнительные стили секций */
+#services {
+    background-color: #f8fafc;
+    padding: 4rem 0;
+}
+
+#advantages {
+    background-color: #ffffff;
+    padding: 4rem 0;
+}
+
+#reviews {
+    background-color: #f8fafc;
+    padding: 4rem 0;
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 1.5rem;
+        padding: 0 20px;
+    }
+    
+    .section-title:after {
+        width: 80px;
+        bottom: -10px;
+    }
+    
+    .feature-card:hover,
+    .service-card:hover,
+    .advantage-card:hover,
+    .testimonial-card:hover {
+        transform: none;
+    }
+}
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .animate-pulse-slow {
+            animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.8;
+            }
+        }
+        .button-style {
+  /* Базовые стили */
+  display: inline-block;
+  padding: 15px 30px;
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  color: white !important;
+  text-decoration: none;
+  border-radius: 50px;
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(37, 117, 252, 0.4);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* Эффект при наведении */
+.button-style:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(37, 117, 252, 0.6);
+  background: linear-gradient(135deg, #2575fc 0%, #6a11cb 100%);
+}
+
+/* Эффект нажатия */
+.button-style:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 10px rgba(37, 117, 252, 0.4);
+}
+
+/* Анимация "пульса" */
+.button-style::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.button-style:hover::after {
+  animation: pulse 1s ease-out;
+}
+
+@keyframes pulse {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+}
+
+/* Иконка (добавьте Font Awesome в head) */
+.button-style i {
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+
+.button-style:hover i {
+  transform: translateX(5px);
+}
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+        }
+        .contact-badge {
+            transition: all 0.3s ease;
+            border-left: 3px solid #2563eb;
+        }
+        .contact-badge:hover {
+            background-color: #f0f7ff;
+            transform: translateX(5px);
+        }
+        #map {
+            height: 400px;
+            width: 100%;
+            border-radius: 0.5rem;
+        }
+        @media (max-width: 768px) {
+            #map {
+                height: 300px;
+            }
+        }
+        .reviews-container {
+    overflow: hidden;
+    position: relative;
+}
+

@@ -1,0 +1,25 @@
+ErrorDocument 404 /404.html
+
+RewriteEngine On
+
+# Исключаем статические файлы из обработки RewriteRule
+RewriteCond %{REQUEST_URI} !\.(js|css|png|jpg|jpeg|gif|ico|svg|webp|woff2?)$ [NC]
+
+# Убираем .html из URL
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^services$ services.html [L]
+
+# Правила для красивых URL
+RewriteRule ^Main/?$ /index.html [L]
+RewriteRule ^Contact/?$ /contact.html#contact [L]
+RewriteRule ^Reviews/?$ /reviews.html#reviews [L]
+RewriteRule ^Service/?$ /service.html#services [L]
+
+# Если нужно, чтобы работали и .html версии
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ $1.html [L]
+<Files "favicon.ico">
+  ErrorDocument 404 "Favicon not found"
+</Files>
